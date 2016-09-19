@@ -1,7 +1,11 @@
-// Hello World Program using Make
-#include "HelloWorld.h"
+//Hello world will call on machine and provide an error message
+//If an error state is recieved.
+
+#include "Machine.h"
 
 int main (){
-HelloWorld:message();
+
+    Machine:machine();
     return 0;
+
 }
