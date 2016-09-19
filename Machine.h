@@ -30,6 +30,7 @@ int machine ()
 
         //Check if input is all numbers//
         for (int i = 0; i < (strlen(input.c_str())-1); i++)
+        //Create an array for easier to read code.
         {
             if (input[i] == '0' || input[i] == '1' || input[i] == '2' || 
                 input[i] == '3' || input[i] == '4' || input[i] == '5' || 
