@@ -4,7 +4,8 @@
 #include <iostream>
 #include <cstring>
 #include <string>
-#include <cstdlib>
+#include <store.h>
+#include <calculator.cpp>
 using namespace std;
 
 int machine ()
