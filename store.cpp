@@ -12,7 +12,7 @@ int write(const int toWrite)
     //Make sure there is space to write according to MAX_SIZE
     if (writePos < MAX_SIZE)
     {
-        myArray[writePos] = atoi(toWrite);
+        myArray[writePos] = toWrite;
         writePos++;
         return 0;
     }
@@ -20,5 +20,19 @@ int write(const int toWrite)
     else
     {
         return 1;
+    }
+}
+
+int read()
+{
+    int tempInt;
+
+    if (writePos > 0)
+    {
+            return myArray[--writePos];
+    }
+    else
+    {
+        return -1;
     }
 }

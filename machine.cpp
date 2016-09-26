@@ -1,11 +1,13 @@
 //Implementation for machine. Displays prompt and
 //does input validation
 
-#include "machine.h"
-#include <iostream>
-#include <cstring>
-#include <string>
-#include <cctype>
+#include "store.h"
+#include "calculator.h"
+
+#include <iostream>  //For IO
+#include <cstring>   //For strlen
+#include <cstdlib>   //For stoi
+#include <cctype>    //for isdigit
 using namespace std;
 
 //Called by main function, important.
@@ -15,6 +17,7 @@ int machine()
     {
         const string PROMPT = "> ";
         string input;
+        int tempInt;
         bool allNums, strAdd;
         
         cout << PROMPT;
@@ -37,11 +40,19 @@ int machine()
         //Check if input is string "add"//
 
         if (input == "add") {strAdd = true;}
-
-        //Echo message if allNums true or strAll true
-        if (strAdd || allNums)
+        
+        //If allNums then 
+        if (allNums)
         {
-            cout << input << endl;
+            tempInt = atoi(input.c_str());
+            write(tempInt);
+            cout << tempInt << endl;
+        }
+
+        //Echo message str = "add"
+        if (strAdd)
+        {
+            cout << add() << endl;
         }
     }
     return 0;

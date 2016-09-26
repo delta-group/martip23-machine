@@ -4,3 +4,6 @@
 
 //Writes integers to array.
 int write(int);
+
+//Reads out ints from array.
+int read();
