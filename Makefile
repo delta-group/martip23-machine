@@ -1,6 +1,6 @@
 # Makefile for C++ project
 
-TARGET = test
+TARGET = machine
 
 FILES 	=  $(wildcard *.cpp)
 OBJS 	=  $(FILES:.cpp=.o)
