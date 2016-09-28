@@ -8,11 +8,21 @@ int add()
 {
     int num1 = read();
     int num2 = read();
-    int sum = num1 + num2;
 
-//    cout << "Num 1 = " << num1 << endl;
-//    cout << "Num 2 = " << num2 << endl;
+    //If read returns error value, return error state
+    if (num2 == -1)
+    {   
+        return -1;
+    }
+    else
+    {
+        int sum = num1 + num2;
+    
+        //DEBUG TOOLS
+    //cout << "Num 1 = " << num1 << endl;
+    //cout << "Num 2 = " << num2 << endl;
 
-    write(sum);
-    return(sum);
+        write(sum);
+        return(sum);
+    }
 }

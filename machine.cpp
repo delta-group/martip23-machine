@@ -17,7 +17,7 @@ int machine()
     {
         const string PROMPT = "> ";
         string input;
-        int tempInt;
+        int tempInt, addResult;
         bool allNums, strAdd;
         
         cout << PROMPT;
@@ -46,13 +46,25 @@ int machine()
         {
             tempInt = atoi(input.c_str());
             write(tempInt);
-            cout << tempInt << endl;
+            cout << tempInt << " added to stack." << endl;
         }
 
         //Echo message str = "add"
         if (strAdd)
         {
-            cout << add() << endl;
+            //Attempt to add the last two items in stack
+            addResult = add();
+            
+            //If error message returned, exit program
+            if (addResult == -1)
+            {
+                cout << "Illegal operation! Exiting program!" << endl;
+                return -1; 
+            }
+
+            //Else, return sum
+            else 
+            { cout << "Sum = " << addResult << endl; }
         }
     }
     return 0;
